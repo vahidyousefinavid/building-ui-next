@@ -3,25 +3,35 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0000;
+  --foreground: #0000;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #fff;
     --foreground: #ededed;
   }
 }
 
 body {
-  color: var(--foreground);
+  color: #000;
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'parastoo';
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="ltr"] {
+  direction: ltr;
+  text-align: left;
 }
